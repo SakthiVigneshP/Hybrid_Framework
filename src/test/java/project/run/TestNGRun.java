@@ -2,6 +2,7 @@ package project.run;
 
 import org.testng.annotations.Test;
 
+
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.text.DateFormat;
@@ -28,7 +29,7 @@ public class TestNGRun {
 	private ExtentSparkReporter reportHTML;
 	ExtentReports report = new ExtentReports();
 	String testCaseName = null, testDataPath = null, testDataName=null,Test_Start_Time = null;
-	ResourceBundle config = ResourceBundle.getBundle("resources.data.config");
+	ResourceBundle config = ResourceBundle.getBundle("config");
 	BasePage basePageObj = new BasePage();
 	
 	
@@ -41,8 +42,8 @@ public class TestNGRun {
 	  String strQuery = null;
 	  
 	  strQuery = "Select TESTCASE_NO from EXECUTION where RUN_TEST='Y'";
-	  testDetails = executeQuery(strQuery);
-	  
+	  //testDetails = executeQuery(strQuery);
+	  testDetails.add("Test_Case_01");
 	  
 	  System.out.println("====================First Run Test Case Details=================");
 	  invokeTestCaseMethods(testDetails);

@@ -28,7 +28,7 @@ public class TestNGRunARD {
 	private ExtentSparkReporter reportHTML;
 	ExtentReports report = new ExtentReports();
 	String testCaseName = null, testDataPath = null, testDataName=null,Test_Start_Time = null;
-	ResourceBundle config = ResourceBundle.getBundle("resources.data.config");
+	ResourceBundle config = ResourceBundle.getBundle("config");
 	BasePage basePageObj = new BasePage();
 	
 	
@@ -149,7 +149,7 @@ public class TestNGRunARD {
 	  
   }
   
-public ArrayList<String> updateQuery(String strQuery){
+public void updateQuery(String testCaseNo,String runStatus){
 	  
 	  testDataPath = config.getString("DATASHEET_PATH");
 	  testDataName = config.getString("DATASHEET_NAME");
@@ -159,22 +159,13 @@ public ArrayList<String> updateQuery(String strQuery){
 		  System.out.println("Data Sheet : "+testDataPath+testDataName);
 		  Fillo fillo = new Fillo();
 		  Connection connection = fillo.getConnection(testDataPath+testDataName);
-		  Recordset recordSet = connection.executeQuery(strQuery);
-		  
-		  if(recordSet.getCount()>0) {
-			  while(recordSet.next()) {
-				  testDetails.add(recordSet.getField("TESTCASE_NO").toString());
-			  }
-		  }else {
-			  System.out.println("No records found for query : "+strQuery);
-		  }
-		  recordSet.close();
+		  String strQuery = "Update EXECUTION Set RUN_STATUS='"+runStatus+"' where TESTCASE_NO='"+testCaseNo+"'";
+		  int recordSet = connection.executeUpdate(strQuery);
+		  System.out.println("No. of rows affected by udpate : "+recordSet);
 		  connection.close();
 	  }catch(Exception e) {
 		  e.printStackTrace();
-	  }
-	  return testDetails;
-	  
+	  }	  
   }
 
   
