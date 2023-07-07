@@ -46,7 +46,7 @@ public class Regression_TestCases {
 			testDataCollection.put("FUNCTIONAL_CASE_NAME","Test_Case_01");
 			testDataCollection.put("TESTCASE_NAME","Test_Case_01");
 			testDataCollection.put("APPLICATION_URL","GOOGLE_URL");
-			testDataCollection.put("BROWSER_TYPE","EDGE");
+			testDataCollection.put("BROWSER_TYPE","CHROME");
 			
 			
 			logger = report
@@ -82,7 +82,7 @@ public class Regression_TestCases {
 			}
 		}finally {
 			report.flush();
-			runObj.updateQuery(testDataCollection.get("TESTCASE_NAME"), logger.getStatus().toString());
+			//runObj.updateQuery(testDataCollection.get("TESTCASE_NAME"), logger.getStatus().toString());
 			driver.close();
 		
 		}

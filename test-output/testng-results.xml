@@ -2,16 +2,39 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-05-13T15:40:52 IST" name="Default suite" finished-at="2023-05-13T15:41:03 IST" duration-ms="11393">
+  <suite started-at="2023-07-07T19:07:56 IST" name="Suite" finished-at="2023-07-07T19:08:11 IST" duration-ms="15359">
     <groups>
     </groups>
-    <test started-at="2023-05-13T15:40:52 IST" name="Default test" finished-at="2023-05-13T15:41:03 IST" duration-ms="11393">
-      <class name="src.dev.SelTest">
-        <test-method signature="searchh()[pri:0, instance:src.dev.SelTest@173ed316]" started-at="2023-05-13T15:40:52 IST" name="searchh" finished-at="2023-05-13T15:41:03 IST" duration-ms="11294" status="PASS">
+    <test started-at="2023-07-07T19:07:56 IST" name="Test" finished-at="2023-07-07T19:08:11 IST" duration-ms="15359">
+      <class name="project.run.TestNGRun">
+        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:project.run.TestNGRun@32115b28]" started-at="2023-07-07T19:07:56 IST" name="beforeSuite" finished-at="2023-07-07T19:07:56 IST" duration-ms="235" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- searchh -->
-      </class> <!-- src.dev.SelTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- beforeSuite -->
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:project.run.TestNGRun@32115b28]" started-at="2023-07-07T19:07:56 IST" name="beforeMethod" finished-at="2023-07-07T19:07:56 IST" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void project.run.TestNGRun.executeTest()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="executeTest()[pri:0, instance:project.run.TestNGRun@32115b28]" started-at="2023-07-07T19:07:56 IST" name="executeTest" finished-at="2023-07-07T19:08:11 IST" duration-ms="15265" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- executeTest -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:project.run.TestNGRun@32115b28]" started-at="2023-07-07T19:08:11 IST" name="afterMethod" finished-at="2023-07-07T19:08:11 IST" duration-ms="42" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="afterSuite()[pri:0, instance:project.run.TestNGRun@32115b28]" started-at="2023-07-07T19:08:11 IST" name="afterSuite" finished-at="2023-07-07T19:08:11 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterSuite -->
+      </class> <!-- project.run.TestNGRun -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

@@ -3,6 +3,7 @@ package project.run;
 import org.testng.annotations.Test;
 
 
+
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.text.DateFormat;
@@ -57,7 +58,7 @@ public class TestNGRun {
 		  for(int i=1;i<=requeueLimit;i++) {
 			  failTestDetails = new ArrayList<String>();
 			  strQuery = "Select TESTCASE_NO from EXECUTION where RUN_STATUS='fail' and RUN_TEST='Y' and REQUEUE_STATUS='YES'";
-			  failTestDetails = executeQuery(strQuery);
+			//  failTestDetails = executeQuery(strQuery);
 			  invokeTestCaseMethods(failTestDetails);
 		  }
 	  }

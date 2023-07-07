@@ -119,10 +119,10 @@ public class BasePage {
 				if(config.getString("ChromeDriver_Path").contains("Program")) {
 					System.setProperty("webdriver.chrome.driver", config.getString("ChromeDriver_Path"));
 				}else {
-					System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+config.getString("ChromeDriver_Path"));
+					System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\"+config.getString("ChromeDriver_Path"));
 				}
 				
-				capabilities.setCapability(ChromeOptions.CAPABILITY, options);
+			/*	capabilities.setCapability(ChromeOptions.CAPABILITY, options);
 				capabilities.setCapability("browserName", "chrome");
 				capabilities.setCapability("ignoreZoomSetting", true);
 				capabilities.setCapability("applicationCacheEnabled", false);
@@ -131,6 +131,7 @@ public class BasePage {
 				//capabilities.setCapability(CapabilityType.ACCEPT_SSL_CERTS, false);
 				capabilities.setCapability("applicationCacheEnabled", false);
 				options.merge(capabilities);
+			*/
 				int attemptNo = 1;
 				boolean exception = false;
 				
