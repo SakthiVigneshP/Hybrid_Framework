@@ -20,7 +20,7 @@
 	          <version>3.1.0</version>
 	          <configuration>
 				  <suiteXmlFiles>
-					  <suiteXmlFile>testNG.xml</suiteXmlFile>
+					  <suiteXmlFile>src\test\resources\testNG.xml</suiteXmlFile>
 				  </suiteXmlFiles>
 			  </configuration>
 	        </plugin>
